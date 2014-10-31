@@ -1,0 +1,52 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET            /                           controllers.Application.index()
+
+# Default Options
+OPTIONS        /*path                      controllers.Application.preflight(path: String)
+
+# User Controller
+POST           /user/me                    controllers.User.me()
+POST           /user/get                   controllers.User.getUser()
+POST           /user/create                controllers.User.create()
+POST           /user/login                 controllers.User.login()
+POST           /user/logout                controllers.User.logout()
+POST           /user/remove                controllers.User.remove()
+POST           /user/disable               controllers.User.disable()
+POST           /user/changePassword        controllers.User.changePassword()
+
+# Vector Controller
+POST           /vector/get                 controllers.Vector.getVector()
+POST           /vector/create              controllers.Vector.create()
+POST           /vector/remove              controllers.Vector.remove()
+POST           /vector/disable             controllers.Vector.disable()
+
+# Disease Controller
+POST           /disease/get                controllers.Disease.getDisease()
+POST           /disease/create             controllers.Disease.create()
+POST           /disease/remove             controllers.Disease.remove()
+POST           /disease/disable            controllers.Disease.disable()
+
+# Climate Controller
+POST           /climate/get                controllers.Climate.getClimate()
+POST           /climate/create             controllers.Climate.create()
+POST           /climate/remove             controllers.Climate.remove()
+POST           /climate/disable            controllers.Climate.disable()
+
+# Incidence Controller
+POST           /incidence/get              controllers.Incidence.getIncidence()
+POST           /incidence/create           controllers.Incidence.create()
+POST           /incidence/remove           controllers.Incidence.remove()
+POST           /incidence/disable          controllers.Incidence.disable()
+
+# Location Controller
+POST           /location/get              controllers.Location.getLocation()
+POST           /location/create           controllers.Location.create()
+POST           /location/remove           controllers.Location.remove()
+POST           /location/disable          controllers.Location.disable()
+
+# Map static resources from the /public folder to the /assets URL path
+GET            /assets/*file               controllers.Assets.at(path="/public", file)
